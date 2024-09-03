@@ -1,11 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { useContext } from "react";
+import Router from "./Router";
+import { GlobalStyles } from "./styles/Global.styled";
+import { ThemeProvider } from "styled-components";
+import { lightTheme, darkTheme } from "./styles/theme";
+import { ThemeContext } from "./contexts/ThemeContext";
+// import { ModalContextProvider } from "./contexts/ModalContext";
 function App() {
+  const { theme } = useContext(ThemeContext);
+  console.log("theme", theme);
+  const mode = theme === "light" ? lightTheme : darkTheme;
+
   return (
-    <div className="App">
-     <h1>TicTacToe</h1>
-    </div>
+    <ThemeProvider theme={mode}>
+      {/* <ModalContextProvider> */}
+        <GlobalStyles />
+        <Router />
+      {/* </ModalContextProvider> */}
+    </ThemeProvider>
   );
 }
 
