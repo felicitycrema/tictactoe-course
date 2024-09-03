@@ -10,10 +10,10 @@ export const GameContextProvider = (props) => {
             name: "Nonty"
         },
         player2: {
-            choice: "O",
+            choice: "o",
             name: "Kuli"
         },
-        turn: "X",
+        turn: "x",
     })
     
     const updateBoard = ( index ) => {
@@ -22,7 +22,7 @@ export const GameContextProvider = (props) => {
         setGame({
             ...game, 
             board: updatedBoard,
-            turn: game.turn === "X" ? "O" : "X"  // Switch player turn
+            turn: game.turn === "x" ? "o" : "x"  // Switch player turn
         })
     }
 

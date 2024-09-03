@@ -22,16 +22,16 @@ export const checkForWInner = (board) => {
     }
 
 
-    // // diagonals 1
-    // if (board[0] === board[4] && board[4] === board[8]) {
-    //     console.log("Diagonal winner")
-    //     return true
-    // }
-    // // diagonals 2
-    // if(board[2] === board[4] && board[4] === board[6]) {
-    //     console.log("Diagonal winner")
-    //     return true
-    // }
+    // diagonals 1
+    if (board[0] === board[4] && board[4] === board[8]) {
+        console.log("Diagonal winner")
+        return true
+    }
+    // diagonals 2
+    if(board[2] === board[4] && board[4] === board[6]) {
+        console.log("Diagonal winner")
+        return true
+    }
     // // diagonals 3
     // if(board[0] === board[3] && board[3] === board[6]) {
     //     console.log("Diagonal winner")
